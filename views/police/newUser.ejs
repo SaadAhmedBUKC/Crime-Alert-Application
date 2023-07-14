@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Complain</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <script src="/js/jquery.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css' rel='stylesheet' />
+
+</head>
+<body class="d-flex flex-column vh-100">
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-link" href="/user">News</a>
+                <a class="nav-link" href="/user/new">Report Complain</a>
+                <a class="nav-link" href="/help">Helpline</a>
+            </div>
+            <div class="navbar-nav ml-auto">
+                <% if(!currentUser) {%>
+                <a class="nav-link" href="/login">Login</a>
+                <a class="nav-link" href="/register">Register</a>
+                <% } else {%>
+                <a class="nav-link" href="/logout">Logout</a>
+                <% } %>
+            </div>
+        </div>
+    </div>
+</nav>
+    <%- include('partials/flash.ejs') %> 
+<div class="row">
+    <div class="col-md-6 offset-md-3">
+        <form method="POST" action="/user" enctype="multipart/form-data" novalidate class="validated-form">
+            <div class="mb-3">
+                <label class="form-label" for="name">NAME</label>
+                <input class="form-control" type="text" id="name" name="name" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="cnic">CNIC</label>
+                <input class="form-control" type="text" id="cnic" name="cnic" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+
+
+
+            <div class="mb-3">
+                <input class="form-control" type="file" id="" name="image" multiple required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label" for="complain">COMPLAIN</label>
+                <input class="form-control" type="text" id="complain" name="complain" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label" for="location">LOCATION</label>
+                <input class="form-control" type="text" id="location" name="location" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label" for="details">DETAILS</label>
+                <textarea class="form-control" type="text" id="details" name="details" required></textarea>
+
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <button class="btn btn-info">Report</button>
+            </div>
+        </form>
+        </div>
+    </div>
+    <%- include('partials/footerU.ejs') %> 
+<script src="/js/validateForms.js"></script>
+</body>
+</html>

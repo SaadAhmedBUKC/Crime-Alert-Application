@@ -1,0 +1,27 @@
+body{
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("https://media.istockphoto.com/id/1222029803/photo/911-emergency-response-police-car-speeding-to-scene-of-crime-selective-focus.jpg?s=612x612&w=0&k=20&c=BjdcvdIwn-s7gO6vHNBnIEROfygczgvFpAFc5VBkGZ8=");
+    background-size: cover;
+    background-position: center;
+}
+.cover-container {
+    max-width: 60vw;
+}
+.nav-link{
+    padding: 0.25 rem 0;
+    font-weight: 700;
+    color: rgba(255,255,255,0.5);
+    margin-left: 1rem;
+    border-bottom: 0.25rem solid transparent;
+}
+.nav-link:hover{
+    border-bottom-color: rgba(255,255,255,0.5);
+}
+.nav-link.active{
+    color: white;
+    border-bottom-color: rgba(255,255,255,0.5);
+}
+.btn-secondary, .btn-secondary:hover{
+    color: #333;
+    text-shadow: none;
+}

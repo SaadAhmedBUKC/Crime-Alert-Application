@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick dialer</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <script src="/js/jquery.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+</head>
+<body class="d-flex flex-column vh-100" style="background-color: #333333;">
+        <%- include('partials/flash.ejs') %>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-link" href="/user">News</a>
+                <a class="nav-link" href="/user/new">Report Complain</a>
+                <a class="nav-link" href="/help">Helpline</a>
+            </div>
+            <div class="navbar-nav ml-auto">
+                <% if(!currentUser) {%>
+                <a class="nav-link" href="/login">Login</a>
+                <a class="nav-link" href="/register">Register</a>
+                <% } else {%>
+                <a class="nav-link" href="/logout">Logout</a>
+                <% } %>
+            </div>
+        </div>
+    </div>
+</nav>
+<p></p>
+
+    <div class="container">
+    <div class="card mb-3" style="background-color: #BBBBBB;">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="card-body">
+                <h5>POLICE</h5>
+                <a href='tel:+18001111111' class="ui-link">15</a>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="card mb-3" style="background-color: #BBBBBB;">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="card-body">
+                <h5>FIRE BRIGADE</h5>
+                <a href='tel:+18001111111' class="ui-link">16</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <div class="card mb-3" style="background-color: #BBBBBB;">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="card-body">
+                <h5>BOMB DISPOSAL SQUAD</h5>
+                <a href='tel:+18001111111' class="ui-link">042-99212111</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    </div>
+    <%- include('partials/footerU.ejs') %> 
+
+</body>
+</html>
