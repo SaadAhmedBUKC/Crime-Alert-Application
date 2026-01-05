@@ -1,11 +1,11 @@
-Crime-Alert-Application
+**Crime-Alert-Application**
 
-Description
+**Description**
 
 This project automates the process of reporting and managing crimes through a web-based application where users can report incidents directly from their phones.
 This project makes use of CRUD operations allowing users and police to:
 
-add crime reports with relevant details and location information.
+__add crime reports with relevant details and location information.
 read and view reported crimes on an interactive map.
 update the status of crimes as they are investigated or resolved by the police.
 delete invalid or resolved crime reports when necessary.
